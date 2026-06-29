@@ -12,6 +12,9 @@ class SplashScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            Spacer(),
+
+            ///STACK
             Stack(
               clipBehavior: Clip.none,
               children: [
@@ -31,9 +34,9 @@ class SplashScreen extends StatelessWidget {
 
                 Positioned(
                   right: -15,
-                  top: -20,
+                  top: -25,
                   child: Container(
-                    padding: EdgeInsets.all(5),
+                    padding: EdgeInsets.all(7),
                     decoration: BoxDecoration(
                       color: Color.fromRGBO(15, 15, 16, 1),
                       shape: BoxShape.circle,
@@ -45,32 +48,61 @@ class SplashScreen extends StatelessWidget {
             ),
 
             SizedBox(height: 25),
+
             Text(
               "Welcome to",
               style: GoogleFonts.plusJakartaSans(
-                fontSize: 28,
+                fontSize: 26,
                 fontWeight: FontWeight.w500,
                 color: Colors.white,
               ),
             ),
+
             SizedBox(height: 10),
+
             Text(
-              "GrammerSense AI",
+              "GrammarSense AI",
               style: GoogleFonts.plusJakartaSans(
-                fontSize: 28,
+                fontSize: 29,
                 fontWeight: FontWeight.w700,
                 color: Color.fromRGBO(106, 83, 231, 1),
               ),
             ),
+
             SizedBox(height: 40),
+
             Text(
-              "Check Grammer Every Words & Sentences",
+              "Write Smarter. Communicate Better.",
               style: GoogleFonts.plusJakartaSans(
                 fontSize: 16,
                 fontWeight: FontWeight.w500,
                 color: Color.fromRGBO(125, 124, 130, 1),
               ),
             ),
+
+            Spacer(),
+
+            ///GET STARTED BUTTON
+            Container(
+              margin: EdgeInsets.all(20),
+              padding: EdgeInsets.symmetric(vertical: 17),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                color: Color.fromRGBO(106, 83, 231, 1),
+              ),
+              child: Center(
+                child: Text(
+                  "Get Started",
+                  style: GoogleFonts.inter(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w500,
+                    color: Colors.white,
+                  ),
+                ),
+              ),
+            ),
+
+            SizedBox(height: 40),
           ],
         ),
       ),
