@@ -1,3 +1,4 @@
+import 'package:ai_grammer_app/views/chat_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -32,6 +33,7 @@ class SplashScreen extends StatelessWidget {
                   ),
                 ),
 
+                ///Positioned
                 Positioned(
                   right: -15,
                   top: -25,
@@ -76,27 +78,39 @@ class SplashScreen extends StatelessWidget {
               style: GoogleFonts.plusJakartaSans(
                 fontSize: 16,
                 fontWeight: FontWeight.w500,
-                color: Color.fromRGBO(125, 124, 130, 1),
+                color: Color.fromRGBO(124, 125, 130, 1),
               ),
             ),
 
             Spacer(),
 
             ///GET STARTED BUTTON
-            Container(
-              margin: EdgeInsets.all(20),
-              padding: EdgeInsets.symmetric(vertical: 17),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-                color: Color.fromRGBO(106, 83, 231, 1),
-              ),
-              child: Center(
-                child: Text(
-                  "Get Started",
-                  style: GoogleFonts.inter(
-                    fontSize: 16,
-                    fontWeight: FontWeight.w500,
-                    color: Colors.white,
+            ///GestureDetector
+            GestureDetector(
+              onTap: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return ChatScreen();
+                    },
+                  ),
+                );
+              },
+              child: Container(
+                height: 50,
+                width: 350,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  color: Color.fromRGBO(106, 83, 231, 1),
+                ),
+                child: Center(
+                  child: Text(
+                    "Get Started",
+                    style: GoogleFonts.inter(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w500,
+                      color: Colors.white,
+                    ),
                   ),
                 ),
               ),
