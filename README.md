@@ -1,5 +1,4 @@
-# GrammarSense AI 🧠✍️
-
+# GrammarSense AI - AI powered Application
 A cross-platform mobile application built with Flutter that uses Google Gemini AI to detect and correct grammatical errors in words, sentences, and paragraphs.
 
 ---
